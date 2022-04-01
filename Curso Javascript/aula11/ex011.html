@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sou Brasileiro?!</title>
+</head>
+<body>
+    <h1>Sou brasileiro?!</h1>
+    Vivendo em : <input type="text" id="txtsigla">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        var sig = document.getElementById('txtsigla')
+        let res = document.querySelector('div#res')
+        
+
+        function verificar () {
+            res.innerHTML = `Seu país é ${sig.value} então... </p>`
+            //res.innerHTML +=  `<p>${typeof(sig.value)}!`
+            if (sig.value=="BR"||"Brasil"){
+
+                res.innerHTML +=  `<p>Você é <strong>Brasileiro</strong>!`
+
+            } else {
+
+                res.innerHTML += `<p>Você é <strong>Estrangeiro</strong>!`
+
+            }
+
+        }
+
+    </script>
+    
+</body>
+</html>
